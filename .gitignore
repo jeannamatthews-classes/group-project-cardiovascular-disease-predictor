@@ -1,0 +1,5 @@
+#ignore MAC files
+*.DS_Store
+
+#ignore notebook outputs
+*.ipynb_checkpoints*
