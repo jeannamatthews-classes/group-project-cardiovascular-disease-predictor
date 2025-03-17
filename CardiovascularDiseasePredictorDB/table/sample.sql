@@ -1,4 +1,4 @@
-CREATE TABLE patient (
+CREATE TABLE sample (
         id        varchar(200) NOT NULL,
         firstName varchar(200),
         lastName  varchar(200),
