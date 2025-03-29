@@ -25,7 +25,8 @@ This database contains information collected from patients admitted to the Hero 
 This database was selected because it covers a wide array of risk factors and discusses multiple cardiovascular diseases. This makes it ideal for the Plan A+ version of our project, which can report the patient's risk for specific cardiovascular diseases.
 
 Meetings:
-I have meet with Mariama to discuss the project every Tuesday and Saturday at 6:00PM to 6:30PM or 7:00PM. During these meetings, I presented my database research findings. In later meetings, Mariama has outlined the plan to analyze the data and has walked me through the code she has written in Jupyter. 
+I have met with Mariama to discuss the project every Tuesday and Saturday at 6:00PM to 6:30PM or 7:00PM. During these meetings, I presented my database research findings. In later meetings, Mariama has outlined the plan to analyze the data and has walked me through the code she has written in Jupyter. 
+
 ------------------------------------------------------------------------------------------------------------
 
 Week of 3/24/25:
