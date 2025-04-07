@@ -1,0 +1,47 @@
+body {
+    font-family:Verdana, sans-serif;
+    background-color: #aabccc;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 75vh;
+    justify-content: center;
+}
+
+button {
+    font-size: 2rem;
+    border-radius: 15px;
+    border: 2px solid black;
+    background-color: hsl(0, 0%, 50%);
+    color: white;
+    margin-top: 20px;
+    padding: 10px;
+    min-width: 150px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(0, 0%, 60%);
+}
+
+button:active {
+    background-color: hsl(0, 0%, 70%);
+}
+
+h1.welcome {
+    background-color: #bbccaa;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 20px;
+    height: 25%;
+    width: 450px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

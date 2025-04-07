@@ -7,4 +7,7 @@
 
 | Date     | Time (hrs) | Activity              | 
 |----------|------------|-----------------------|
-| 20250323 | 2          |Cleaned the data by removing NULL values. Started data normalization| 
+| 20250323 | 2          |Cleaned the data by removing NULL values. Started data normalization|
+| 20250329 | 0.5        |Group meeting to discuss project progress |
+| 20250405 | 0.25       |Read documentation for UI| 
+| 20250406 | 5          |Completed data preprocessing. Tested different models using a subset of the dataset| 

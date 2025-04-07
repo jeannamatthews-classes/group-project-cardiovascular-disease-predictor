@@ -1,0 +1,3 @@
+20250406
+Model and UI exploration is completed. Started building both model and UI. These two components are currently behind schedule. We hope to catch up in the coming days.
+

@@ -1,0 +1,156 @@
+body {
+    font-family:Verdana, sans-serif;
+    background-color: #aabccc;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1.welcome {
+    max-width: 525px;
+    width: 100%;
+    background-color: #bbccaa;
+    border-radius: 15px;
+    border: none;
+
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    max-width: 450px;
+    width: 100%;
+    background-color: #cbaabb;
+    border-radius: 15px;
+    border: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+p {
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 1.125rem;
+}
+
+#navigateP {
+    margin: 0px;
+    font-size: 1.25rem;
+}
+
+.inputRowDiv{
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.inputRowLabel{
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.inputRowInput{
+    font-size: 1.25rem;
+    border-color: black;
+    border-radius: 5px;
+    height: 25px;
+    width: 55%;
+    max-width: 250px;
+}
+
+.inputRowSelect{
+    font-size: 1.25rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 30px;
+    width: 57.25%;
+    max-width: 250px;
+}
+
+.hidden-error{
+    display: none;
+}
+
+.shown-error{
+    display: block;
+    color: red;
+}
+
+.invalidEntry{
+    border-color: red;
+}
+
+.submit{
+    width: 80%;
+    max-width: 350px;
+
+    background-color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+
+    border-radius: 5px;
+    border: 2px solid black;
+    
+    padding: 5px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+button.navigate{
+    background-color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+
+    border-radius: 5px;
+    border: 2px solid black;
+    
+    padding: 5px;
+    cursor: pointer;
+}
+
+button.disabled{
+    background-color: hsla(0, 0%, 50%, 0.5);
+    cursor: default;
+}
+
+button.enabled:hover{
+    background-color: lightgrey;
+}
+
+button.enabled:active{
+    background-color: hsl(0, 0%, 65%);
+}
+
+#navigateDiv{
+    width: 79.25%;
+    margin-top: 25px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.shown{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hidden{
+    display: none;
+}

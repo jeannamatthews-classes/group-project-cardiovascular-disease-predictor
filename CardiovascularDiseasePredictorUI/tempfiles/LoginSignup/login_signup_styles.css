@@ -1,0 +1,113 @@
+body {
+    font-family:Verdana, sans-serif;
+    background-color: #aabccc;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 75vh;
+    justify-content: center;
+}
+
+h1.welcome {
+    max-width: 450px;
+    width: 100%;
+    background-color: #bbccaa;
+    border-radius: 15px;
+    border: none;
+
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 1.125rem;
+}
+
+.hidden-error{
+    display: none;
+}
+
+.shown-error{
+    display: block;
+    color: red;
+}
+
+form{
+    max-width: 450px;
+    width: 100%;
+    background-color: #cbaabb;
+    border-radius: 15px;
+    border: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+button{
+    width: 55%;
+    max-width: 250px;
+
+    background-color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+
+    border-radius: 5px;
+    border: 2px solid black;
+    
+    padding: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: lightgrey;
+}
+
+button:active{
+    background-color: hsl(0, 0%, 65%);
+}
+
+.inputRowDiv{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputRowLabel{
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.inputRowInput{
+    font-size: 1.25rem;
+    border-color: black;
+    border-radius: 5px;
+    height: 25px;
+    width: 55%;
+    max-width: 250px;
+}
+
+.invalidEntry{
+    border-color: red;
+}
