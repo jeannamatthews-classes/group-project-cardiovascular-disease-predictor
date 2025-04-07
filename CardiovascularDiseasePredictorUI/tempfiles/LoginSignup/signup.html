@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiovascular Disease Predictor</title>
+    <link rel="stylesheet" href="login_signup_styles.css">
+</head>
+
+<body>
+    <h1 class = "welcome"> Signup </h1>
+
+    <form id = "signupForm">
+        <div class = "inputRowDiv">
+            <label for = "usernameInput" class = "inputRowLabel">Username: </label>
+            <input id = "usernameInput" name = "username" class = "inputRowInput" type = "text" maxlength="64" autocomplete="off" required>
+        </div>
+        <p id = "usernameErrorMessage" class = "hidden-error"> </p>
+
+        <div class = "inputRowDiv">
+            <label for = "passwordInput" class = "inputRowLabel">Password: </label>
+            <input id = "passwordInput" name = "password" class = "inputRowInput" type = "text" maxlength="64" autocomplete="off" required>
+        </div>
+        <p id = "passwordErrorMessage" class = "hidden-error"> </p>
+
+        <div class = "inputRowDiv">
+            <label for = "confirmPasswordInput" class = "inputRowLabel">Confirm Password: </label>
+            <input id = "confirmPasswordInput" name = "confirmPassword" class = "inputRowInput" type = "text" maxlength="64" autocomplete="off" required>
+        </div>
+        <p id = "confirmPasswordErrorMessage" class = "hidden-error"> </p>
+
+        <button type = "submit">Signup</button>
+    </form>
+
+    <script src = "signup.js"> </script>
+</body>
+
+</html>

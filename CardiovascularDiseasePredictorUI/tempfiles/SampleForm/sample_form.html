@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiovascular Disease Predictor</title>
+    <link rel="stylesheet" href="sample_form_styles.css">
+</head>
+
+<body>
+    <h1 class = "welcome"> Please Enter Sample Data: </h1>
+
+    <form id = "sampleForm" action = "../Results/results.html" novalidate>
+        <!-- Form Page 1 -->
+        <div class = "inputRowDiv shown">
+            <label for = "ageInput" class = "inputRowLabel">Age: </label>
+            <input id = "ageInput" name = "age" class = "inputRowInput" type = "text" maxlength = "3" autocomplete="off" required>
+        </div>
+        <p id = "ageInputErrorMessage" class = "hidden-error"> </p>
+
+        <div class = "inputRowDiv shown">
+            <label for = "genderInput" class = "inputRowLabel">Gender: </label>
+            <select id = "genderInput" name = "gender" class = "inputRowSelect" required>
+            <option label=" "></option>
+            <option label = "Male" value = "0"> </option> <!-- CHECK -->
+            <option label = "Female" value = "1"> </option> <!-- CHECK -->
+            </select>
+        </div>
+        <p class = "hidden-error"> Fill out field to continue. </p>
+
+        <div class = "inputRowDiv shown">
+            <label for = "smokingInput" class = "inputRowLabel">Smoker: </label>
+            <select id = "smokingInput" name = "smoker" class = "inputRowSelect" required>
+            <option label=" "></option>
+            <option label = "Yes" value = "0"> </option> <!-- CHECK -->
+            <option label = "No" value = "1"> </option> <!-- CHECK -->
+            </select>
+        </div>
+        <p class = "hidden-error"> Fill out field to continue. </p>
+
+        <div class = "inputRowDiv shown">
+            <label for = "alcoholInput" class = "inputRowLabel">Alcohol: </label>
+            <select id = "alcoholInput" name = "alcohol" class = "inputRowSelect" required>
+            <option label=" "></option>
+            <option label = "Yes" value = "0"> </option> <!-- CHECK -->
+            <option label = "No" value = "1"> </option> <!-- CHECK -->
+            </select>
+        </div>
+        <p class = "hidden-error"> Fill out field to continue. </p>
+
+        <div class = "inputRowDiv shown">
+            <label for = "priorCMPInput" class = "inputRowLabel">Prior CMP: </label>
+            <select id = "priorCMPInput" name = "priorCMP" class = "inputRowSelect" required>
+            <option label=" "></option>
+            <option label = "Yes" value = "0"> </option> <!-- CHECK -->
+            <option label = "No" value = "1"> </option> <!-- CHECK -->
+            </select>
+        </div>
+        <p class = "hidden-error"> Fill out field to continue. </p>
+
+
+
+        <!-- Form Page 2 -->
+        <div class = "inputRowDiv hidden">
+            <label for = "testInput1" class = "inputRowLabel"> Test1 </label>
+            <input id = "testInput1" name = "test1" class = "inputRowInput" type = "text" autocomplete="off" required>
+        </div>
+        <p id = "testInputErrorMessage" class = "hidden-error"> </p>
+
+        <div class = "inputRowDiv hidden">
+            <label for = "testInput2" class = "inputRowLabel"> Test2 </label>
+            <input id = "testInput2" name = "test2" class = "inputRowInput" type = "text" autocomplete="off" required>
+        </div>
+        <p id = "testInputErrorMessage" class = "hidden-error"> </p>
+
+        <div class = "inputRowDiv hidden">
+            <label for = "testInput3" class = "inputRowLabel"> Test3 </label>
+            <input id = "testInput3" name = "test3" class = "inputRowInput" type = "text" autocomplete="off" required>
+        </div>
+        <p id = "testInputErrorMessage" class = "hidden-error"> </p>
+
+        <div class = "inputRowDiv hidden">
+            <label for = "testInput4" class = "inputRowLabel"> Test4 </label>
+            <input id = "testInput4" name = "test4" class = "inputRowInput" type = "text" autocomplete="off" required>
+        </div>
+        <p id = "testInputErrorMessage" class = "hidden-error"> </p>
+
+        <div class = "inputRowDiv hidden">
+            <label for = "testInput5" class = "inputRowLabel"> Test5 </label>
+            <input id = "testInput5" name = "test5" class = "inputRowInput" type = "text" autocomplete="off" required>
+        </div>
+        <p id = "testInputErrorMessage" class = "hidden-error"> </p>
+
+        <!-- Form Page 3 -->
+        <div class = "inputRowDiv hidden">
+            <label for = "testInput6" class = "inputRowLabel"> Test1 </label>
+            <input id = "testInput6" name = "test6" class = "inputRowInput" type = "text" autocomplete="off" required>
+        </div>
+        <p id = "testInputErrorMessage" class = "hidden-error"> </p>
+
+        <div class = "inputRowDiv hidden">
+            <label for = "testInput7" class = "inputRowLabel"> Test2 </label>
+            <input id = "testInput7" name = "test7" class = "inputRowInput" type = "text" autocomplete="off" required>
+        </div>
+        <p id = "testInputErrorMessage" class = "hidden-error"> </p>
+
+        <div class = "inputRowDiv hidden">
+            <label for = "testInput8" class = "inputRowLabel"> Test3 </label>
+            <input id = "testInput8" name = "test8" class = "inputRowInput" type = "text" autocomplete="off" required>
+        </div>
+        <p id = "testInputErrorMessage" class = "hidden-error"> </p>
+
+        <div class = "inputRowDiv hidden">
+            <label for = "testInput9" class = "inputRowLabel"> Test4 </label>
+            <input id = "testInput9" name = "test9" class = "inputRowInput" type = "text" autocomplete="off" required>
+        </div>
+        <p id = "testInputErrorMessage" class = "hidden-error"> </p>
+
+        <div class = "inputRowDiv hidden">
+            <label for = "testInput10" class = "inputRowLabel"> Test5 </label>
+            <input id = "testInput10" name = "test10" class = "inputRowInput" type = "text" autocomplete="off" required>
+        </div>
+        <p id = "testInputErrorMessage" class = "hidden-error"> </p>
+
+
+        <!-- Navigation Bar -->
+        <div id = "navigateDiv">
+            <button type = "button" id = "prevInputsButton" class = "navigate disabled" onclick = "prevInputs()"> < </button>
+            <p id = "navigateP"> </p>
+            <button type = "button" id = "nextInputsButton" class = "navigate enabled" onclick = "nextInputs()"> > </button>
+        </div>
+
+        <button type = "submit" class = "submit disabled">Submit</button>
+    </form>
+
+    <script src = "sample_form.js"> </script>
+</body>
+
+</html>
