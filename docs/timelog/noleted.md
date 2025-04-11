@@ -51,6 +51,7 @@ I now have a workspace in Visual Studio Code. I have installed the Live Server e
 Saturday-Sunday: Spent 6.0 Hours constructing a draft of the MVP version of the graphical user interface. 
 
 I now have a user interface which can validate user input into <input> and <select> elements. I have removed the possibility for the user to enter emojis or other unqiue characters that would be difficult to manage. I have created a system to ensure that the input in an <input> box is within a certain numerical range, which will be very helpful for validating our form before the user submits it.
+
 ------------------------------------------------------------------------------------------------------------
 
 Week of 4/5/25:
