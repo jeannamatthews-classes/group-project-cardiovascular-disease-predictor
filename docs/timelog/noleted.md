@@ -51,3 +51,12 @@ I now have a workspace in Visual Studio Code. I have installed the Live Server e
 Saturday-Sunday: Spent 6.0 Hours constructing a draft of the MVP version of the graphical user interface. 
 
 I now have a user interface which can validate user input into <input> and <select> elements. I have removed the possibility for the user to enter emojis or other unqiue characters that would be difficult to manage. I have created a system to ensure that the input in an <input> box is within a certain numerical range, which will be very helpful for validating our form before the user submits it.
+------------------------------------------------------------------------------------------------------------
+
+Week of 4/5/25:
+Tuesday: Spent 1 Hour resarching how to submit HTML form data to MySQL using PHP. I eventually decided to abandon this approach in favor of using Flask. I then spent 2 Hours researching Flask, creating a Flask application, and integrating the existing user interface.
+Later, I spent 1 Hour debugging to prevent the user from being able to access certain webpages without having first logged in. I spent another 1.5 Hours updating the user interface to more closely meet the requirements of the project. I reduced the JavaScript associated with each webpage and implemented error-checking in the Python back-end instead.
+
+Wednesday: I spent 2 Hours researching how to use databases with Flask. I then spent 1 Hour coding what I had learned. The result was the creation of three databases, into which I could permanently place entries from the web application.
+
+Thursday: I spent 2 Hours finalizing the databases, and then 0.75 Hours meeting with Mariama to discuss plans for RAPS, followed by 1.5 Hours of creating a presentation.
