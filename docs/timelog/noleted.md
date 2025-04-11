@@ -43,10 +43,7 @@ Also on Friday: 0.5 Hours setting up Visual Studio Code and Linking Project File
                 
 I now have a workspace in Visual Studio Code. I have installed the Live Server extension and can easily view the changes to my web GUI in real-time. I am following along with the web GUI outline provided in our design documents. Currently, I have created a home page containing a 'Login' button, which re-directs to a 'Login' page when clicked. This page has an in-progress form where the user can enter their username and password.
                 
-/* This week represented an above-average time-sink. I really wanted to learn JavaScript and
-*  invested a LOT of time into it. All of the values above are genuinely accurate. I watched
-*  a 1-hour HTML tutorial, a 4-hour CSS tutorial, and a 12-hour JavaScript tutorial in full.
-*/
+This week represented an above-average time-sink. I really wanted to learn JavaScript and invested a LOT of time into it. All of the values above are genuinely accurate. I watched a 1-hour HTML tutorial, a 4-hour CSS tutorial, and a 12-hour JavaScript tutorial in full.
 
 Saturday-Sunday: Spent 6.0 Hours constructing a draft of the MVP version of the graphical user interface. 
 
