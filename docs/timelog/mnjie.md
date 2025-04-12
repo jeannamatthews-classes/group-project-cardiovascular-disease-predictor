@@ -11,3 +11,9 @@
 | 20250329 | 0.5        |Group meeting to discuss project progress |
 | 20250405 | 0.25       |Read documentation for UI| 
 | 20250406 | 6.5        |Completed data preprocessing. Tested different models using a subset of the dataset. <br> **File**  = CardiovascularDiseasePredictorBackend/src/model/CardiovascularDiseasePredictorModel.ipynb <br> **Commit** = 725806dcea6d314dacc6021efb95210371fc31a9
+| 20250407 | 7          |Complete building the models for the two types of prediction <br> **File**  = CardiovascularDiseasePredictorBackend/src/model/CardiovascularDiseasePredictorModel.ipynb <br> **Commit** = f3a29d8ba8c3e29d14ef7684ac9e4ed6b5af8a4c
+| 20250408 | 0.5        |Group meeting to discuss project progress 
+| 20250409 | 4          |Build result logic in the backend <br> **File**  = CardiovascularDiseasePredictorBackend/* <br> **Commit** = f3a29d8ba8c3e29d14ef7684ac9e4ed6b5af8a4c
+| 20250410 | 6          |Tie the frontend to the backend and perform some integration tests. <br> **File**  =  CardiovascularDiseasePredictorBackend/* & CardiovascularDiseasePredictorUI/* <br> **Commit** = f3a29d8ba8c3e29d14ef7684ac9e4ed6b5af8a4c
+| 20250411 | 2          |RAPS prep and group discussion
+| 20250412 | 2          |Updated the Frontend, Backend documentation <br> **File**  = docs/design/20250412/CardiovascularDiseasePredictorProjectDocumentation_MASTER.pdf <br> **Commit** = f3a29d8ba8c3e29d14ef7684ac9e4ed6b5af8a4c
