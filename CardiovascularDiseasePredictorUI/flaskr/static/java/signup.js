@@ -131,22 +131,15 @@ function confirmPassword() {
     }
 }
 
+// Add event listeners
 document.getElementById("passwordInput").addEventListener("change", confirmPassword);
 document.getElementById("confirmPasswordInput").addEventListener("change", confirmPassword);
 
 
-//Store login information and return to the home page
-function storeLogin(username, password) {       
-    //IMPLEMENT
-}
-
+// Submit the form only if the input is valid 
 document.getElementById("signupForm").addEventListener("submit", async event => {
-    event.preventDefault();
-    if(validPassword && validConfirmPassword){
-        storeLogin(document.getElementById("usernameInput").value, document.getElementById("passwordInput").value);
-        window.location = "../Home/index.html";
-    }
-    else{
+    if(!validPassword || !validConfirmPassword){
+        event.preventDefault();
         document.getElementById("passwordInput").value = "";
         document.getElementById("confirmPasswordInput").value = "";
     }

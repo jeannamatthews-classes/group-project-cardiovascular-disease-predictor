@@ -1,5 +1,12 @@
 #ignore MAC files
 *.DS_Store
 
+#ignore IntelliJ files
+*.idea/
+
+#ignore pycache files
+*__pycache__/
+
+
 #ignore notebook outputs
 *.ipynb_checkpoints*

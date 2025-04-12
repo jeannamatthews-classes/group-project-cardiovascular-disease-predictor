@@ -5,14 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardiovascular Disease Predictor</title>
-    <link rel="stylesheet" href="index_styles.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/index.css')}}">
 </head>
 
 <body>
     <h1 class = "welcome"> Welcome to the Cardiovascular Disease Predictor </h1>
-    <button id = "toLoginButton"> Login </button>
-    <button id = "toSignupButton"> Signup </button>
-    <script src = "index.js"> </script>
+   
+    <form action = "login" method = "get">
+        <button> Login </button>
+    </form>
+
+    <form action = "signup" method = "get">
+        <button> Signup </button>
+    </form>      
 </body>
 
 </html>

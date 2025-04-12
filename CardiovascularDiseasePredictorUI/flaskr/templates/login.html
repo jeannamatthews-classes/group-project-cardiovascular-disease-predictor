@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardiovascular Disease Predictor</title>
-    <link rel="stylesheet" href="login_signup_styles.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/login_signup.css')}}">
 </head>
 
 <body>
     <h1 class = "welcome"> Login </h1>
 
-    <form id = "loginForm">
+    <form id = "loginForm" action = "#" method = "post">
         <div class = "inputRowDiv">
             <label for = "usernameInput" class = "inputRowLabel">Username: </label>
             <input id = "usernameInput" name = "username" class = "inputRowInput" type = "text" maxlength="64" autocomplete="off" required>
@@ -20,11 +20,14 @@
             <label for = "passwordInput" class = "inputRowLabel">Password: </label>
             <input id = "passwordInput" name = "password" class = "inputRowInput" type = "password" maxlength="64" autocomplete="off" required>
         </div>
-        <p id = "loginErrorMessage" class = "hidden-error"> Test </p>
+
+        {% if message %}
+        <p class = "shown-error"> {{ message }} </p>
+        {% endif %}
         <button type = "submit">Login</button>
     </form>
 
-    <script src = "login.js"> </script>
+    <script src = "{{url_for('static', filename='java/login.js')}}"> </script>
 </body>
 
 </html>

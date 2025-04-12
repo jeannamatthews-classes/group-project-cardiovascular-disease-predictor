@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardiovascular Disease Predictor</title>
-    <link rel="stylesheet" href="user_home_styles.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/user_home.css')}}">
 </head>
 
 <body>
     <h1 class = "welcome"> Analyze Sample </h1>
-
-    <button onclick = "advance()"> Analyze Sample </button>
-    <script src = "user_home.js"> </script>
+    <form action = "sample_form" method = "get">
+        <button > Analyze Sample </button>
+    </form>
 </body>
 
 </html>

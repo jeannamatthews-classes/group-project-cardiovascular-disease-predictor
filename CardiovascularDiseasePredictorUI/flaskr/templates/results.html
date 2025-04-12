@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiovascular Disease Predictor</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/results.css')}}">
+</head>
+
+<body>
+    <h1 class = "welcome"> Results </h1>
+
+    <div id = container>
+
+        <div>
+            <p class = "result">{{result}}</p>
+        </div>
+    </div>
+    <div>
+        <form action = "sample_form" method = "get">
+                <button > Analyze Another Sample </button>
+        </form>
+    </div>
+</body>
+
+</html>
