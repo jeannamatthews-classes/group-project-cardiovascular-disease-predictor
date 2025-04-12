@@ -1,17 +1,21 @@
-Welcome to the Cardiovascular Disease Predictor Repo :yellow_heart:
+<div align="center">
+    <p> :blue_heart: Welcome to the Cardiovascular Disease Predictor Repo :blue_heart: </p>
+    <img src="./assets/img/hearts.jpg" alt="heart" width="350" height="270">
+</div>
 
-![](assets/img/hearts.jpg)
+---
 
-### :blue_heart: Goal
-This project aims to build a web application that uses ML to predict the presence of cardiovascular diseases.
-
-### :purple_heart: Background
-Cardiovascular diseases are diseases that affect the heart or blood vessels, examples include heart failure, stroke, etc.
+### :yellow_heart:  Background
+This project aims to build a web application that uses ML to predict the presence of cardiovascular diseases. Cardiovascular diseases are diseases that affect the heart or blood vessels, examples include heart failure, stroke etc. 
 
 ### :purple_heart: Tech Stack
-DB: sqlite
-Frontend: flask, javascript, html, CSS
-Backend: python
+DB: sqlite <br>
+Frontend: flask, javascript, html, CSS <br>
+Backend: python <br>
 
-### :heart: Demo
-Comming soon..
+
+### :heart: Setup Instructions
+Coming soon..
+
+### 💙 Demo
+Coming soon..
