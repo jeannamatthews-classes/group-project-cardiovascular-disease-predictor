@@ -1,0 +1,120 @@
+body {
+    font-family:Verdana, sans-serif;
+    background-color: #aabccc;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1.welcome {
+    max-width: 525px;
+    width: 100%;
+    background-color: #bbccaa;
+    border-radius: 15px;
+    border: none;
+
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+form {
+    max-width: 450px;
+    width: 100%;
+    background-color: #cbaabb;
+    border-radius: 15px;
+    border: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+p {
+    margin: 0px;
+    margin-top: 10px;
+    font-size: 1.125rem;
+}
+
+.inputRowDiv {
+    width: 76%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputRowLabel {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.selectFileLabel {
+    font-size: 1.25rem;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 25px;
+    width: 125px;    
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
+
+.submit{
+    width: 80%;
+    max-width: 350px;
+
+    background-color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+
+    border-radius: 5px;
+    border: 2px solid black;
+   
+    padding: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+button:hover, .selectFileLabel:hover {
+    background-color: lightgrey;
+}
+
+button:active, .selectFileLabel:active {
+    background-color: hsl(0, 0%, 65%);
+}
+
+.shown{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hidden{
+    display: none;
+}
+
+p {
+    margin: 0px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 1.125rem;
+}
+
+.hidden-error{
+    display: none;
+}
+
+.shown-error{
+    display: block;
+    color: red;
+}

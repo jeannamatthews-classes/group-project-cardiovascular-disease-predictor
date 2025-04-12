@@ -1,0 +1,53 @@
+body {
+    font-family:Verdana, sans-serif;
+    background-color: #aabccc;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 80vh;
+}
+
+h1.welcome {
+    max-width: 525px;
+    width: 100%;
+    background-color: #bbccaa;
+    border-radius: 15px;
+    border: none;
+
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#container{
+    background-color: #cbaabb;
+    border-radius: 25px;
+    max-width: 525px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.75rem;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#leftDiv{
+    text-align: left;
+}
+
+#rightDiv{
+    text-align: right;
+}
+
+.resultsDiv{
+    width: 80%;
+    height: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

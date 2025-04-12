@@ -1,0 +1,2 @@
+20250412
+The model and UI components are completed. Some testing have been completed. We are currently reorganizing the code and rebuilding the model to make it more accurate. The team is on track.

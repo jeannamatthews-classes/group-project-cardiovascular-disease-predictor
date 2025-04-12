@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiovascular Disease Predictor</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/sample_form.css')}}">
+</head>
+
+<body>
+    <h1 class = "welcome"> Please Enter Sample Data: </h1>
+
+    <form id = "sampleForm" action = "#" method = "post" enctype = "multipart/form-data">
+        <div class = "inputRowDiv">
+            <label class = "inputRowLabel">CSV File: </label>
+
+            <input id = "fileInput" class = "hidden" name = "csv_file" type = "file" accept = ".csv">
+            <label for = "fileInput" class = "selectFileLabel" id = "selectFileLabel"> Select file </label>
+
+        </div>
+        <div>
+            <label for = "prediction_type_input" class = "inputRowLabel">Prediction Type: </label>
+            <input id = "prediction_type_input" name = "prediction_type" class = "inputRowInput" type = "text" autocomplete="off" required>
+        </div>
+        <p id = "fileInputErrorMessage" class = "hidden-error"> </p>
+
+        <button type = "submit" class = "submit">Submit</button>
+    </form>
+
+    <script src = "{{url_for('static', filename='java/sample_form.js')}}"> </script>
+</body>
+</html>
