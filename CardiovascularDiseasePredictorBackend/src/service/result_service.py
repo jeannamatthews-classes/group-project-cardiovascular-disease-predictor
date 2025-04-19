@@ -2,6 +2,10 @@ import os
 import pickle
 import pandas as pd
 from io import StringIO
+from datetime import datetime
+from repository.db_model import DbModel
+from sqlalchemy import sql, create_engine,insert, select
+
 
 """
 Implements the logic to generate the result for a sample
@@ -18,26 +22,50 @@ class ResultService:
                             'CARDIOMYOPATHY', 'HEART FAILURE', 'CONGENITAL HEART DISEASE']
 
 
-    def get_results(self, predict_type, sample_path):
+    def get_results(self, sample_info, engine, session):
         """
         Get the result of a sample and stores the result in a database.
         The result statement is also returned.
         Inputs:
-            predict_type: a string representing the prediction type. Expected values are 1 (class1) and 2 (class2).
-            sample_path:  path for the sample
+            sample_info: a dictionary that stores the location of the sample and type of test
+            engine:  the database engine
+            session:  the database session
         Outputs:
                 result_statement: a string summarizing the result of the analysis
         """
         #get sample
-        sample = self.load_sample(sample_path)
+        sample = sample_info["csv_file"]
+        sample_df = self.load_sample(sample)
+
+
+        #store sample
+        current_timestamp = str(datetime.now())
+        result = self.store_sample(sample,current_timestamp, engine)
+        if(result == '1'):
+            return {'status': '1', 'message': 'There was an error adding the sample'}
 
         #get prediction
+        predict_type = sample_info['prediction_type']
         model = self.load_model(predict_type)                                    #load model
-        prediction = model.predict(sample)
+        prediction = model.predict(sample_df)
         predicted_class = int(prediction[0])
 
         #interpret prediction
         final_result = self.interpret_result(predict_type, predicted_class)
+
+        #store result
+        Sample = DbModel().get_sample()
+        sample_id_query = select(Sample.c.id).where(Sample.c.record_added == current_timestamp)
+        sample_id = session.execute(sample_id_query).first()[0]
+        profiler_id = sample_info['profiler_id']
+        self.store_result(final_result,predict_type, sample_id, profiler_id, engine, session)
+
+
+        return final_result
+
+
+
+
 
         return final_result
 
@@ -45,7 +73,7 @@ class ResultService:
         """
         load the sample into a dataframe
         Inputs:
-            sample_data: string representing the path of the sample
+            sample_data: string representing the sample data
         Outputs:
             sample:  a pandas dataframe representing the inputs from a sample
         """
@@ -81,9 +109,6 @@ class ResultService:
              print(f"ERROR: The file was not found. Please enter a valid file.")
              exit(1)
 
-
-
-
     def load_model(self, predict_type):
         """
         Get the model based on prediction type
@@ -106,19 +131,54 @@ class ResultService:
             model = pickle.load(f)
         return model
 
+    def store_sample(self, sample, timestamp, engine):
+        """
+        Store the sample to the database
+        Inputs:
+            sample: a string representation of the sample
+            timestamp: a string representing the timestamp
+            engine: the db engine
+        Outputs:
+                None
+        """
+        Sample = DbModel().get_sample()
+        try:
+            query = insert(Sample).values(sample_content=sample, record_added=timestamp)
+            with engine.connect() as connection:
+                connection.execute(query)
+                connection.commit()
+            return '0'
+        except:
+            return '1'
 
-
-    def store_result(self, predict_type, sample, predicted_value):
+    def store_result(self, result, predict_type, sample_id, profiler_id, engine, session):
         """
         Store the result of a sample to the database
         Inputs:
+            result: a string representing the result of the analysis
             predict_type: a string representing the prediction type. Expected values are 1 (class1) and 2 (class2).
-            sample:  a pandas dataframe representing the inputs from a sample
+            sample_id:  id of the sample
+            profiler_id: id of the profiler
             predicted_value: a string representing the result of the prediction
         Outputs:
                 None
         """
-        return 0
+
+
+
+        result_rundate = datetime.now()
+        Result = DbModel().get_result()
+
+        try:
+            query = insert(Result).values(profiler_id=profiler_id, sample_id=sample_id,
+                                          record_added=result_rundate, result=result)
+            with engine.connect() as connection:
+                connection.execute(query)
+                connection.commit()
+            return '0'
+        except:
+            return "There was an error adding the Result."
+            return '1'
 
     def interpret_result(self, predict_type, predicted_class):
         # interpret prediction
@@ -146,9 +206,8 @@ class ResultService:
 
 
 
-#data = 'AGE,GENDER,SMOKING,ALCOHOL, DM, CKD, HB, TLC,PLATELETS, GLUCOSE, UREA, CREATININE, BNP,RAISED CARDIAC ENZYMES, EF,SEVERE ANAEMIA, ANAEMIA,STABLE ANGINA, ACS, STEMI, ATYPICAL CHEST PAIN, HFREF,HFNEF, VALVULAR, CHB, SSS, AKI, CVA INFRACT, CVA BLEED,AF, VT, PSVT, UTI, NEURO CARDIOGENIC SYNCOPE, ORTHOSTATIC,INFECTIVE ENDOCARDITIS, DVT, CARDIOGENIC SHOCK, SHOCK,PULMONARY EMBOLISM, CHEST INFECTION \n0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0'
-#result_service = ResultService()
-#print(result_service.interpret_result("2", 5))
+
+
 
 
 
